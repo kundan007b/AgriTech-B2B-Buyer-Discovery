@@ -1,0 +1,17 @@
+{
+    "name": "agritech-buyer-discovery",
+    "version": "0.2.0",
+    "type": "module",
+    "description": "AgriTech B2B Buyer Discovery",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.1.0",
+        "crawlee": "^3.5.0",
+        "playwright": "*"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}

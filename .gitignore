@@ -1,0 +1,16 @@
+# IDE and OS files
+.DS_Store
+.idea
+.vscode
+.zed
+Thumbs.db
+
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+
+# Local Apify storage — generated during local runs, never commit
+apify_storage
+storage

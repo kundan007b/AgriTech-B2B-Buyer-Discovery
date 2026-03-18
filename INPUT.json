@@ -1,0 +1,12 @@
+{
+    "commodities": ["lemongrass essential oil"],
+    "buyerCountries": [],
+    "maxPages": 2,
+    "minOrderQuantityKg": 0,
+    "maxLeadAgeDays": 365,
+    "debugMode": true,
+    "proxyConfig": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+    }
+}

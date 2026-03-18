@@ -1,0 +1,65 @@
+{
+    "title": "AgriTech Buyer Discovery",
+    "description": "Find international B2B buyers for agricultural export commodities like essential oils, spices, and organic products.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "commodities": {
+            "title": "Commodities to Search",
+            "type": "array",
+            "description": "List of products to search for buyers",
+            "editor": "stringList",
+            "default": [
+                "lemongrass essential oil",
+                "citronella oil"
+            ]
+        },
+        "buyerCountries": {
+            "title": "Buyer Countries (leave empty for all)",
+            "type": "array",
+            "description": "Only show leads from these countries. Leave empty to show all countries. Example: United States, Germany, Japan, United Kingdom, France",
+            "editor": "stringList",
+            "default": []
+        },
+        "maxPages": {
+            "title": "Max Pages per Search",
+            "type": "integer",
+            "description": "Maximum number of result pages to scrape per commodity per platform",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 20
+        },
+        "minOrderQuantityKg": {
+            "title": "Minimum Order Quantity (kg)",
+            "type": "integer",
+            "description": "Filter out leads below this quantity. Set to 0 to include all.",
+            "default": 25,
+            "minimum": 0
+        },
+        "maxLeadAgeDays": {
+            "title": "Maximum Lead Age (days)",
+            "type": "integer",
+            "description": "Only include leads posted within this many days",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 365
+        },
+        "debugMode": {
+            "title": "Debug Mode",
+            "type": "boolean",
+            "description": "Save raw HTML from each page to Key-Value Store for troubleshooting",
+            "default": false
+        },
+        "proxyConfig": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Configure proxy settings. Use RESIDENTIAL for best results.",
+            "editor": "proxy",
+            "default": {
+                "useApifyProxy": true,
+                "apifyProxyGroups": ["RESIDENTIAL"]
+            }
+        }
+    },
+    "required": ["commodities"]
+}
